@@ -1,0 +1,177 @@
+<html>
+<head>
+    <title>This is title</title>
+    <link type="text/css" rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!--
+<h3>Add customer </h3>
+
+<form id='frmCustomer' method="post" action="saveCustomer.action">
+    <input type='hidden' id='id' name='id'/>
+    <p>Name:<br><input type="text" id='name' name="name" style="width:150px"></p>
+    <p>Address:<br><input type="text" id='address' name="address" style="width:150px"></p>
+    <p><input type="button" value="Save" onclick="saveCustomer();">
+        <input type="button" onclick="window.location.href='index2.html'" value="Back">
+        <input type="button" onclick="addCustomer();" value="Add new"></p>
+
+</form>
+-->
+<form id="formCer" method="post" action="addCertificate.action">
+
+<table border="1">
+    <thead>
+        <tr>
+            <td>Board</td>
+            <td><input type="text" id="board" name="board"></td>
+        </tr>
+        <tr>
+            <td>Subject</td>
+            <td><input type="text" id="subject" name="subject"></td>
+        </tr>
+        <tr>
+            <td>Training System</td>
+            <td><input type="text" id="trainingsystem" name="trainingsystem"></td>
+        </tr>
+        <tr>
+            <td>Start Date</td>
+            <td><input type="text" id="startdate" name="startdate"></td>
+        </tr>
+        <tr>
+            <td>End Date</td>
+            <td><input type="text" id="enddate" name="enddate"></td>
+        </tr>
+        <tr>
+            <td>Candidate</td>
+            <td><input type="text" id="candidate" name="candidate"></td>
+        </tr>
+        <tr><td rowspan="2"><input type="submit" onclick="addCertificate();" value="Add Certificate" /></td> </tr>
+    </thead>
+</table>
+</form>
+
+<h3>List of certificates</h3>
+<table border=1>
+    <thead>
+    <tr>
+        <td>ID</td>
+        <td>Board</td>
+        <td>Subject</td>
+        <td>Training System</td>
+        <td>Start Date</td>
+        <td>End Date</td>
+        <td>Candidate</td>
+        <!--<td>Action</td>-->
+    </tr>
+    </thead>
+    <tbody>
+    #foreach($certificate in $certificates)
+    <tr id='tr_$certificate.Cid'>
+        <td>$certificate.Cid</td>
+        <td>$certificate.board</td>
+        <td>$certificate.subject</td>
+        <td>$certificate.trainingSystem</td>
+        <td>$certificate.startDate</td>
+        <td>$certificate.endDate</td>
+        <td>$certificate.candidate</td>
+        <td><a onclick='editCertificate($certificate.Cid)'>Edit</a> <a onclick='deleteCertificate($certificate.Cid)'>Delete</a></td>
+    </tr>
+    #end
+    </tbody>
+
+</table>
+
+</body>
+</html>
+
+<script src="http://code.jquery.com/jquery-latest.min.js"
+        type="text/javascript"></script>
+<script>
+    function addCertificate()
+    {
+        jQuery.ajax({
+                        url:'addCertificate.action',
+                        data: jQuery('#frmCer').serialize(),
+                        success: function(html){}
+                    });
+    }
+
+    function editCertificate(id)
+    {
+    jQuery.ajax({
+    url:'editCertificate.action',
+    data: 'id='+id,
+    success: function(html){
+
+    arr = html.split('\n');
+
+    jQuery('#board').val(arr[0].split(':')[1]);
+    jQuery('#subject').val(arr[1].split(':')[1]);
+    jQuery('#trainingsystem').val(arr[2].split(':')[1]);
+    jQuery('#startdate').val(arr[3].split(':')[1]);
+    jQuery('#enddate').val(arr[4].split(':')[1]);
+    jQuery('#candidate').val(arr[5].split(':')[1]);
+    }
+    });
+    }
+
+
+    function saveCustomer()
+    {
+        jQuery.ajax({
+            url:'saveCustomer.action',
+            data: jQuery('#frmCustomer').serialize(),
+            success: function(html){
+
+                arr = html.split(':');
+                id = arr[1];
+
+                if(jQuery('#id').val()>0) {
+                    //update
+                } else {
+                    //add new
+                    row = "<tr><td></td><td>"+jQuery('#name').val()+"</td><td>"+jQuery('#address').val()+"</td>";
+
+                    link = "<td><a onclick='editCustomer("+id+")'>Edit</a></td>";
+
+                    row += link + "</tr>";
+
+                    jQuery('tbody').append(row);
+
+                }
+                jQuery('#id').val(arr[1]);
+            }
+        });
+    }
+
+    function editCustomer(id)
+    {
+        jQuery.ajax({
+            url:'editCustomer.action',
+            data: 'id='+id,
+            success: function(html){
+
+                arr = html.split('\n');
+
+                jQuery('#id').val(arr[0].split(':')[1]);
+                jQuery('#name').val(arr[1].split(':')[1]);
+                jQuery('#address').val(arr[2].split(':')[1]);
+            }
+        });
+    }
+
+    function deleteCertificate(Cid)
+    {
+        if(confirm('Do you really want to delete?')) {
+            jQuery.ajax({
+                url:'deleteCertificate.action',
+                data: 'id=' + Cid,
+                success: function(html){
+                    jQuery("#tr_"+Cid).fadeOut(1000);
+                    alert('Deleted successfully');
+                }
+            });
+        }
+    }
+
+</script>

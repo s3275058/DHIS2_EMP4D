@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.hisp.dhis:dhis-web-api:2.14-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/hisp/dhis/dhis-web-api/2.14-SNAPSHOT/dhis-web-api-2.14-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/hisp/dhis/dhis-web-api/2.14-SNAPSHOT/dhis-web-api-2.14-SNAPSHOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/hisp/dhis/dhis-web-api/2.14-SNAPSHOT/dhis-web-api-2.14-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

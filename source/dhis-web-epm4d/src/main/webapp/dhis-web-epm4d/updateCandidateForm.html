@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EPM4D</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/theme.css" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="page-header">
+    <h2>$user.username</h2>
+</div>
+<div class="row">
+    <div class="col-sm-3">
+        <div class="list-group">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Candidates</h3>
+                </div>
+            </div>
+            <a href="index.action" class="list-group-item">Home Page</a>
+            <a href="list.action" class="list-group-item">Certificates</a>
+            <a href="listCandidate.action" class="list-group-item">Candidates</a>
+            <a href="listCollege.action" class="list-group-item">College</a>
+            <a href="../dhis-web-commons-about/showUpdateUserProfileForm.action" class="list-group-item">Profile</a>
+            <a href="about.action" class="list-group-item">About</a>
+            <a href="../dhis-web-commons-security/logout.action" class="list-group-item">Log Out</a>
+        </div>
+    </div>
+
+    <div class="col-sm-8">
+        <div class="panel panel-default">
+
+            <div class="panel-heading">Update Candidate Form</div>
+            <br/><br/>
+
+            <form class="form-horizontal" role="form" action="updateCandidate.action" method="post">
+
+                <input type="hidden" id="idC" name="idC" value="$candidate.id" />
+                <div class="form-group">
+                    <label for="sid" class="col-sm-3 control-label">C-ID</label>
+
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" id="sid" name="sid" value="$candidate.sid">
+                    </div>
+                </div>
+				<div class="form-group">
+                    <label for="surname" class="col-sm-3 control-label">Surname</label>
+
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" id="surname" name="surname" value="$candidate.surname">
+                    </div>
+                </div>
+				<div class="form-group">
+                    <label for="lastname" class="col-sm-3 control-label">Last Name</label>
+
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" id="lastname" name="lastname" value="$candidate.lastname">
+                    </div>
+                </div>
+				<div class="form-group">
+                    <label for="dob" class="col-sm-3 control-label">DoB</label>
+
+                    <div class="col-sm-7">
+                        <input type="date" class="form-control" id="dob" name="dob" value="$candidate.dob">
+                    </div>
+                </div>
+				<div class="form-group">
+                    <label for="address" class="col-sm-3 control-label">Address</label>
+
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" id="address" name="address" value="$candidate.address">
+                    </div>
+                </div>
+				<div class="form-group">
+                    <label for="phone" class="col-sm-3 control-label">Phone</label>
+
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" id="phone" name="phone" value="$candidate.phone">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="college" class="col-sm-3 control-label">College</label>
+
+                    <div class="col-sm-7">
+                        <select id="college" name="college" class="form-control">
+                            #foreach($college in $colleges)
+                            <option value="$college.name" #if( $candidate.college == $college.name )selected="selected"#end>$college.name</option>
+                            #end
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="nationality" class="col-sm-3 control-label">Nationality</label>
+
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" id="nationality" name="nationality" value="$candidate.nationality">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email" class="col-sm-3 control-label">Email</label>
+
+                    <div class="col-sm-7">
+                        <input type="email" class="form-control" id="email" name="email" value="$candidate.email">
+                    </div>
+                </div>
+				<div class="form-group">
+                    <label for="gender" class="col-sm-3 control-label">Gender</label>
+
+                    <div class="col-sm-7">
+                        <select id="gender" name="gender" class="form-control">
+							<option value="Male" #if( $candidate.gender == "Male" )selected="selected"#end>Male</option>
+							<option value="Female" #if( $candidate.gender == "Female" )selected="selected"#end>Female</option>
+						</select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Dynamic Attribute</label>
+                    <div class="col-sm-7">
+                        #tblDynamicAttributes( { "attributes": $attributes } )
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-3 col-sm-10">
+                        <button type="submit" class="btn btn-default btn-sm">Save</button>
+                        <a href="listCandidate.action" class="btn btn-default btn-sm" role="button">Cancel</a>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

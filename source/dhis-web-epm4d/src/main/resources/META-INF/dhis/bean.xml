@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd" >
+
+
+    <bean id="org.hisp.dhis.epm4d.action.ShowAddCertificateForm" class="org.hisp.dhis.epm4d.action.ShowAddCertificateForm">
+        <property name="userService" ref="org.hisp.dhis.user.UserService"></property>
+        <property name="currentUserService" ref="org.hisp.dhis.user.CurrentUserService"></property>
+        <property name="attributeService" ref="org.hisp.dhis.attribute.AttributeService"></property>
+    </bean>
+
+    <bean id="org.hisp.dhis.epm4d.action.AddCertificate" class="org.hisp.dhis.epm4d.action.AddCertificate">
+        <property name="userService" ref="org.hisp.dhis.user.UserService"></property>
+        <property name="currentUserService" ref="org.hisp.dhis.user.CurrentUserService"></property>
+        <property name="attributeService" ref="org.hisp.dhis.attribute.AttributeService"></property>
+        <property name="certificateService" ref="org.hisp.dhis.certificate.CertificateService"></property>
+    </bean>
+
+    <bean id="org.hisp.dhis.epm4d.action.CertificateInformation" class="org.hisp.dhis.epm4d.action.CertificateInformation">
+        <property name="userService" ref="org.hisp.dhis.user.UserService"></property>
+        <property name="currentUserService" ref="org.hisp.dhis.user.CurrentUserService"></property>
+        <property name="attributeService" ref="org.hisp.dhis.attribute.AttributeService"></property>
+        <property name="certificateService" ref="org.hisp.dhis.certificate.CertificateService"></property>
+    </bean>
+
+    <bean id="org.hisp.dhis.epm4d.action.DeleteCertificate" class="org.hisp.dhis.epm4d.action.DeleteCertificate">
+        <property name="userService" ref="org.hisp.dhis.user.UserService"></property>
+        <property name="currentUserService" ref="org.hisp.dhis.user.CurrentUserService"></property>
+        <property name="certificateService" ref="org.hisp.dhis.certificate.CertificateService"></property>
+    </bean>
+
+    <bean id="org.hisp.dhis.epm4d.action.ShowUpdateCertificateForm" class="org.hisp.dhis.epm4d.action.ShowUpdateCertificateForm">
+        <property name="userService" ref="org.hisp.dhis.user.UserService"></property>
+        <property name="currentUserService" ref="org.hisp.dhis.user.CurrentUserService"></property>
+        <property name="attributeService" ref="org.hisp.dhis.attribute.AttributeService"></property>
+        <property name="certificateService" ref="org.hisp.dhis.certificate.CertificateService"></property>
+    </bean>
+
+    <bean id="org.hisp.dhis.epm4d.action.UpdateCertificate" class="org.hisp.dhis.epm4d.action.UpdateCertificate">
+        <property name="userService" ref="org.hisp.dhis.user.UserService"></property>
+        <property name="currentUserService" ref="org.hisp.dhis.user.CurrentUserService"></property>
+        <property name="attributeService" ref="org.hisp.dhis.attribute.AttributeService"></property>
+        <property name="certificateService" ref="org.hisp.dhis.certificate.CertificateService"></property>
+    </bean>
+
+    <bean id="org.hisp.dhis.epm4d.action.ListCandidate" class="org.hisp.dhis.epm4d.action.ListCandidate">
+        <property name="userService" ref="org.hisp.dhis.user.UserService"></property>
+        <property name="currentUserService" ref="org.hisp.dhis.user.CurrentUserService"></property>
+        <property name="candidateService" ref="org.hisp.dhis.candidate.CandidateService"></property>
+    </bean>
+
+    <bean id="org.hisp.dhis.epm4d.action.ListCollege" class="org.hisp.dhis.epm4d.action.ListCollege">
+        <property name="userService" ref="org.hisp.dhis.user.UserService"></property>
+        <property name="currentUserService" ref="org.hisp.dhis.user.CurrentUserService"></property>
+        <property name="collegeService" ref="org.hisp.dhis.college.CollegeService"></property>
+    </bean>
+</beans>

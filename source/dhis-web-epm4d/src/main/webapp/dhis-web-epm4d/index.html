@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>EPM4D</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="page-header">
+    <h2>$user.surname $user.firstName</h2>
+</div>
+
+<div class="row">
+    <div class="col-sm-3">
+        <div class="list-group">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Home Page</h3>
+                </div>
+            </div>
+            <a href="index.action" class="list-group-item">Home Page</a>
+            <a href="list.action" class="list-group-item">Certificates</a>
+            <a href="listCandidate.action" class="list-group-item">Candidates</a>
+            <a href="listCollege.action" class="list-group-item">College</a>
+            <a href="../dhis-web-commons-about/showUpdateUserProfileForm.action" class="list-group-item">Profile</a>
+            <a href="about.action" class="list-group-item">About</a>
+            <a href="../dhis-web-commons-security/logout.action" class="list-group-item">Log Out</a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">List Certificates</h3>
+                </div>
+                <div class="panel-body">
+                    <p>General information of educational certificates which certified by different boards</p>
+                    <p><a href="list.action" class="btn btn-default btn-lg" role="button">Details &raquo;</a></p>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">List Candidate</h3>
+                </div>
+                <div class="panel-body">
+                    <p>General information of candidates who certified by different colleges. Click Detail button to view more information</p>
+                    <p><a href="listCandidate.action" class="btn btn-default btn-lg" role="button">Details &raquo;</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">List Colleges</h3>
+                </div>
+                <div class="panel-body">
+                    <p>General information of colleges in Vietnam and their training systems. Click Detail to view more information</p>
+
+                    <p><a href="listCollege.action" class="btn btn-default btn-lg" role="button">Details &raquo;</a></p>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">About</h3>
+                </div>
+                <div class="panel-body">
+                    <p>General information of team and project on DHIS2 - EPM4D stands for Educational Profile Management for Doctors</p>
+                    <p><a href="about.action" class="btn btn-default btn-lg" role="button">Details &raquo;</a></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>

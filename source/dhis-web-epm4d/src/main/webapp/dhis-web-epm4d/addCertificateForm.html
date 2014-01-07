@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EPM4D</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/theme.css" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="page-header">
+    <h2>$user.username</h2>
+</div>
+<div class="row">
+    <div class="col-sm-3">
+        <div class="list-group">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Certificates</h3>
+                </div>
+            </div>
+            <a href="index.action" class="list-group-item">Home Page</a>
+            <a href="list.action" class="list-group-item">Certificates</a>
+            <a href="listCandidate.action" class="list-group-item">Candidates</a>
+            <a href="listCollege.action" class="list-group-item">College</a>
+            <a href="../dhis-web-commons-about/showUpdateUserProfileForm.action" class="list-group-item">Profile</a>
+            <a href="about.action" class="list-group-item">About</a>
+            <a href="../dhis-web-commons-security/logout.action" class="list-group-item">Log Out</a>
+        </div>
+    </div>
+
+    <div class="col-sm-8">
+        <div class="panel panel-default">
+
+            <div class="panel-heading">Add Certificate Form</div>
+            <br/><br/>
+
+            <form class="form-horizontal" role="form" action="addCertificate.action" method="post">
+                <div class="form-group">
+                    <label for="cid" class="col-sm-3 control-label">C-ID</label>
+
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" id="cid" name="cid" placeholder="Certificate ID">
+                    </div>
+                </div>
+                <!--
+                <div class="form-group">
+                    <label for="orgunit" class="col-sm-3 control-label">OrgUnit</label>
+
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" id="orgunit" name="orgunit" placeholder="Orgunit">
+                    </div>
+                </div>
+                -->
+                <div class="form-group">
+                    <label for="college" class="col-sm-3 control-label">College</label>
+
+                    <div class="col-sm-7">
+                        <select id="college" name="college" class="form-control">
+                            #foreach($college in $colleges)
+                            <option value="$college.name">$college.name</option>
+                            #end
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="candidate" class="col-sm-3 control-label">Candidate</label>
+
+                    <div class="col-sm-7">
+                        <select id="candidate" name="candidate" class="form-control">
+                            #foreach($candidate in $candidates)
+                            <option value="$candidate.surname $candidate.lastname">$candidate.surname $candidate.lastname</option>
+                            #end
+                        </select>
+                    </div>
+                </div>
+                <!--    Relational database -- No need this field
+                <div class="form-group">
+                    <label for="dob" class="col-sm-3 control-label">DoB</label>
+
+                    <div class="col-sm-7">
+                        <input type="date" class="form-control" id="dob" name="dob" placeholder="Date Of Birth">
+                    </div>
+                </div>
+                -->
+                <div class="form-group">
+                    <label for="yog" class="col-sm-3 control-label">Year Graduation</label>
+
+                    <div class="col-sm-7">
+                        <input type="date" class="form-control" id="yog" name="yog"
+                               placeholder="Year Of Graduation">
+                    </div>
+                </div>
+				<div class="form-group">
+                    <label for="classification" class="col-sm-3 control-label">Classification</label>
+
+                    <div class="col-sm-7">
+                        <select id="classification" name="classification" class="form-control">
+							<option value="High Distinction" selected="selected">High Distinction</option>
+							<option value="Distinction">Distinction</option>
+							<option value="Average">Average</option>
+						</select>
+                    </div>
+                </div>
+                <!-- Reelational database -- No need this field
+                <div class="form-group">
+                    <label for="trainingsystem" class="col-sm-3 control-label">Training System</label>
+
+                    <div class="col-sm-7">
+                        <select id="trainingsystem" name="trainingsystem" class="form-control">
+							<option value="International" selected="selected">International</option>
+							<option value="Government">Government</option>
+							<option value="Certificate">Certificate</option>
+						</select>
+                    </div>
+                </div>
+                -->
+                <div class="form-group">
+                    <label for="major" class="col-sm-3 control-label">Major</label>
+
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" id="major" name="major" placeholder="Major">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Dynamic Attributes</label>
+                    <div class="col-sm-7">
+                        #tblDynamicAttributes( { "attributes": $attributes } )
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-3 col-sm-10">
+                        <button type="submit" class="btn btn-default btn-sm">Add New</button>
+                        <a href="list.action" class="btn btn-default btn-sm" role="button">Cancel</a>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

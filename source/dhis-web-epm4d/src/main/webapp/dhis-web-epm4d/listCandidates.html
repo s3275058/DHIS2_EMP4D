@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EPM4D</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/theme.css" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="page-header">
+    <h2>$user.username</h2>
+</div>
+<div class="row">
+    <div class="col-sm-3">
+        <div class="list-group">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Candidates</h3>
+                </div>
+            </div>
+            <a href="index.action" class="list-group-item">Home Page</a>
+            <a href="list.action" class="list-group-item">Certificates</a>
+            <a href="listCandidate.action" class="list-group-item">Candidates</a>
+            <a href="listCollege.action" class="list-group-item">College</a>
+            <a href="../dhis-web-commons-about/showUpdateUserProfileForm.action" class="list-group-item">Profile</a>
+            <a href="about.action" class="list-group-item">About</a>
+            <a href="../dhis-web-commons-security/logout.action" class="list-group-item">Log Out</a>
+        </div>
+    </div>
+
+    <div class="col-sm-9">
+        <a href="showAddCandidateForm.action" class="btn btn-default btn-sm" role="button">Add New &raquo;</a>
+        </br></br>
+        <div class="panel panel-default">
+
+            <div class="panel-heading">List Of Candidates</div>
+
+            <table class="table">
+                <thead>
+                <tr>
+                    <td>S ID</td>
+                    <td>Full Name</td>
+                    <td>Date of Birth</td>
+                    <td>Email</td>
+                    <td>College</td>
+                    <td>Options</td>
+                </tr>
+                </thead>
+                <tbody>
+                #foreach($candidate in $candidates)
+                <tr>
+                    <td>$candidate.sid</td>
+                    <td>$candidate.surname $candidate.lastname</td>
+                    <td>$candidate.dob</td>
+                    <td>$candidate.email</td>
+                    <td>$candidate.college</td>
+                    <td>
+                        <a href="showCandidate.action?idC=${candidate.id}" class="btn btn-info btn-sm" role="button">Details</a>
+                        <a href="showUpdateCandidateForm.action?idC=${candidate.id}" class="btn btn-info btn-sm" role="button">Edit</a>
+                        <a href="deleteCandidate.action?idC=${candidate.id}" class="btn btn-info btn-sm" role="button" onclick="return confirm('Are you sure?');"">Delete</a>
+                    </td>
+                </tr>
+                #end
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1 @@
+dhis-service-core/src/main/resources/META-INF/dhis

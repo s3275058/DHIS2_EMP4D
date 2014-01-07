@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EPM4D</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/theme.css" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="page-header">
+    <h2>$user.username</h2>
+</div>
+<div class="row">
+    <div class="col-sm-3">
+        <div class="list-group">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">College</h3>
+                </div>
+            </div>
+            <a href="index.action" class="list-group-item">Home Page</a>
+            <a href="list.action" class="list-group-item">Certificates</a>
+            <a href="listCandidate.action" class="list-group-item">Candidates</a>
+            <a href="listCollege.action" class="list-group-item">College</a>
+            <a href="../dhis-web-commons-about/showUpdateUserProfileForm.action" class="list-group-item">Profile</a>
+            <a href="about.action" class="list-group-item">About</a>
+            <a href="../dhis-web-commons-security/logout.action" class="list-group-item">Log Out</a>
+        </div>
+    </div>
+
+    <div class="col-sm-8">
+        <div class="panel panel-default">
+
+            <div class="panel-heading">Add College Form</div>
+            <br/><br/>
+
+            <form class="form-horizontal" role="form" action="addCollege.action" method="post">
+                <div class="form-group">
+                    <label for="coid" class="col-sm-3 control-label">College-ID</label>
+
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" id="coid" name="coid" placeholder="College ID">
+                    </div>
+                </div>
+				<div class="form-group">
+                    <label for="name" class="col-sm-3 control-label">Name</label>
+
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+                    </div>
+                </div>
+				<div class="form-group">
+                    <label for="address" class="col-sm-3 control-label">Address</label>
+
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" id="address" name="address" placeholder="Address">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="orgunit" class="col-sm-3 control-label">OrgUnit</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" id="orgunit" name="orgunit" placeholder="Orgunit">
+                    </div>
+                </div>
+				<div class="form-group">
+                    <label for="phone" class="col-sm-3 control-label">Phone</label>
+
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone">
+                    </div>
+                </div>
+				<div class="form-group">
+                    <label for="trainingsystem" class="col-sm-3 control-label">Training System</label>
+
+                    <div class="col-sm-7">
+                        <select id="trainingsystem" name="trainingsystem" class="form-control">
+							<option value="International" selected="selected">International</option>
+							<option value="Government">Government</option>
+							<option value="Certificate">Certificate</option>
+						</select>
+                    </div>
+                </div>
+				<div class="form-group">
+                    <label for="establishdate" class="col-sm-3 control-label">Establish Date</label>
+
+                    <div class="col-sm-7">
+                        <input type="date" class="form-control" id="establishdate" name="establishdate" placeholder="Establish Date">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Dynamic Attributes</label>
+                    <div class="col-sm-7">
+                        #tblDynamicAttributes( { "attributes": $attributes } )
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-3 col-sm-10">
+                        <button type="submit" class="btn btn-default btn-sm">Add New</button>
+                        <a href="listCollege.action" class="btn btn-default btn-sm" role="button">Cancel</a>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

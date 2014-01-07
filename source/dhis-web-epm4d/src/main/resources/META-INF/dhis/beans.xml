@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd" >
+
+    <bean id="org.hisp.dhis.epm4d.action.Test" class="org.hisp.dhis.epm4d.action.Test">
+        <property name="userService" ref="org.hisp.dhis.user.UserService"></property>
+        <property name="certificateService" ref="org.hisp.dhis.certificate.CertificateService"></property>
+        <property name="currentUserService" ref="org.hisp.dhis.user.CurrentUserService"></property>
+    </bean>
+
+    <bean id="org.hisp.dhis.epm4d.action.ListCandidate" class="org.hisp.dhis.epm4d.action.ListCandidate">
+        <property name="userService" ref="org.hisp.dhis.user.UserService"></property>
+        <property name="currentUserService" ref="org.hisp.dhis.user.CurrentUserService"></property>
+        <property name="candidateService" ref="org.hisp.dhis.candidate.CandidateService"></property>
+    </bean>
+
+    <bean id="org.hisp.dhis.epm4d.action.ListCollege" class="org.hisp.dhis.epm4d.action.ListCollege">
+        <property name="userService" ref="org.hisp.dhis.user.UserService"></property>
+        <property name="currentUserService" ref="org.hisp.dhis.user.CurrentUserService"></property>
+        <property name="collegeService" ref="org.hisp.dhis.college.CollegeService"></property>
+    </bean>
+
+    <bean id="org.hisp.dhis.epm4d.action.NoAction" class="org.hisp.dhis.epm4d.action.NoAction">
+        <property name="userService" ref="org.hisp.dhis.user.UserService"></property>
+        <property name="currentUserService" ref="org.hisp.dhis.user.CurrentUserService"></property>
+    </bean>
+
+    <bean id="org.hisp.dhis.epm4d.action.About" class="org.hisp.dhis.epm4d.action.About">
+        <property name="userService" ref="org.hisp.dhis.user.UserService"></property>
+        <property name="currentUserService" ref="org.hisp.dhis.user.CurrentUserService"></property>
+    </bean>
+
+    <bean id="org.hisp.dhis.epm4d.action.ShowAddCertificateForm" class="org.hisp.dhis.epm4d.action.ShowAddCertificateForm">
+        <property name="userService" ref="org.hisp.dhis.user.UserService"></property>
+        <property name="currentUserService" ref="org.hisp.dhis.user.CurrentUserService"></property>
+        <property name="attributeService" ref="org.hisp.dhis.attribute.AttributeService"></property>
+        <property name="collegeService" ref="org.hisp.dhis.college.CollegeService"></property>
+        <property name="candidateService" ref="org.hisp.dhis.candidate.CandidateService"></property>
+    </bean>
+
+    <bean id="org.hisp.dhis.epm4d.action.AddCertificate" class="org.hisp.dhis.epm4d.action.AddCertificate">
+        <property name="userService" ref="org.hisp.dhis.user.UserService"></property>
+        <property name="currentUserService" ref="org.hisp.dhis.user.CurrentUserService"></property>
+        <property name="attributeService" ref="org.hisp.dhis.attribute.AttributeService"></property>
+        <property name="certificateService" ref="org.hisp.dhis.certificate.CertificateService"></property>
+        <property name="collegeService" ref="org.hisp.dhis.college.CollegeService"></property>
+        <property name="candidateService" ref="org.hisp.dhis.candidate.CandidateService"></property>
+    </bean>
+
+    <bean id="org.hisp.dhis.epm4d.action.ShowAddCandidateForm" class="org.hisp.dhis.epm4d.action.ShowAddCandidateForm">
+         <property name="userService" ref="org.hisp.dhis.user.UserService"></property>
+         <property name="currentUserService" ref="org.hisp.dhis.user.CurrentUserService"></property>
+         <property name="attributeService" ref="org.hisp.dhis.attribute.AttributeService"></property>
+         <property name="collegeService" ref="org.hisp.dhis.college.CollegeService"></property>
+    </bean>
+
+    <bean id="org.hisp.dhis.epm4d.action.AddCandidate" class="org.hisp.dhis.epm4d.action.AddCandidate">
+        <property name="userService" ref="org.hisp.dhis.user.UserService"></property>
+        <property name="currentUserService" ref="org.hisp.dhis.user.CurrentUserService"></property>
+        <property name="attributeService" ref="org.hisp.dhis.attribute.AttributeService"></property>
+        <property name="candidateService" ref="org.hisp.dhis.candidate.CandidateService"></property>
+    </bean>
+
+    <bean id="org.hisp.dhis.epm4d.action.ShowAddCollegeForm" class="org.hisp.dhis.epm4d.action.ShowAddCollegeForm">
+         <property name="userService" ref="org.hisp.dhis.user.UserService"></property>
+         <property name="currentUserService" ref="org.hisp.dhis.user.CurrentUserService"></property>
+            <property name="attributeService" ref="org.hisp.dhis.attribute.AttributeService"></property>
+    </bean>
+
+    <bean id="org.hisp.dhis.epm4d.action.AddCollege" class="org.hisp.dhis.epm4d.action.AddCollege">
+        <property name="userService" ref="org.hisp.dhis.user.UserService"></property>
+        <property name="currentUserService" ref="org.hisp.dhis.user.CurrentUserService"></property>
+        <property name="attributeService" ref="org.hisp.dhis.attribute.AttributeService"></property>
+        <property name="collegeService" ref="org.hisp.dhis.college.CollegeService"></property>
+    </bean>
+
+    <bean id="org.hisp.dhis.epm4d.action.CertificateInformation" class="org.hisp.dhis.epm4d.action.CertificateInformation">
+        <property name="userService" ref="org.hisp.dhis.user.UserService"></property>
+        <property name="currentUserService" ref="org.hisp.dhis.user.CurrentUserService"></property>
+        <property name="attributeService" ref="org.hisp.dhis.attribute.AttributeService"></property>
+        <property name="certificateService" ref="org.hisp.dhis.certificate.CertificateService"></property>
+    </bean>
+
+    <bean id="org.hisp.dhis.epm4d.action.CandidateInformation" class="org.hisp.dhis.epm4d.action.CandidateInformation">
+        <property name="userService" ref="org.hisp.dhis.user.UserService"></property>
+        <property name="currentUserService" ref="org.hisp.dhis.user.CurrentUserService"></property>
+        <property name="attributeService" ref="org.hisp.dhis.attribute.AttributeService"></property>
+        <property name="candidateService" ref="org.hisp.dhis.candidate.CandidateService"></property>
+    </bean>
+
+    <bean id="org.hisp.dhis.epm4d.action.CollegeInformation" class="org.hisp.dhis.epm4d.action.CollegeInformation">
+        <property name="userService" ref="org.hisp.dhis.user.UserService"></property>
+        <property name="currentUserService" ref="org.hisp.dhis.user.CurrentUserService"></property>
+        <property name="attributeService" ref="org.hisp.dhis.attribute.AttributeService"></property>
+        <property name="collegeService" ref="org.hisp.dhis.college.CollegeService"></property>
+    </bean>
+
+    <bean id="org.hisp.dhis.epm4d.action.DeleteCertificate" class="org.hisp.dhis.epm4d.action.DeleteCertificate">
+         <property name="userService" ref="org.hisp.dhis.user.UserService"></property>
+         <property name="currentUserService" ref="org.hisp.dhis.user.CurrentUserService"></property>
+         <property name="certificateService" ref="org.hisp.dhis.certificate.CertificateService"></property>
+    </bean>
+
+    <bean id="org.hisp.dhis.epm4d.action.DeleteCandidate" class="org.hisp.dhis.epm4d.action.DeleteCandidate">
+         <property name="userService" ref="org.hisp.dhis.user.UserService"></property>
+         <property name="currentUserService" ref="org.hisp.dhis.user.CurrentUserService"></property>
+         <property name="candidateService" ref="org.hisp.dhis.candidate.CandidateService"></property>
+    </bean>
+
+    <bean id="org.hisp.dhis.epm4d.action.DeleteCollege" class="org.hisp.dhis.epm4d.action.DeleteCollege">
+         <property name="userService" ref="org.hisp.dhis.user.UserService"></property>
+         <property name="currentUserService" ref="org.hisp.dhis.user.CurrentUserService"></property>
+         <property name="collegeService" ref="org.hisp.dhis.college.CollegeService"></property>
+    </bean>
+
+    <bean id="org.hisp.dhis.epm4d.action.ShowUpdateCertificateForm" class="org.hisp.dhis.epm4d.action.ShowUpdateCertificateForm">
+        <property name="userService" ref="org.hisp.dhis.user.UserService"></property>
+        <property name="currentUserService" ref="org.hisp.dhis.user.CurrentUserService"></property>
+        <property name="attributeService" ref="org.hisp.dhis.attribute.AttributeService"></property>
+        <property name="certificateService" ref="org.hisp.dhis.certificate.CertificateService"></property>
+        <property name="collegeService" ref="org.hisp.dhis.college.CollegeService"></property>
+        <property name="candidateService" ref="org.hisp.dhis.candidate.CandidateService"></property>
+    </bean>
+
+    <bean id="org.hisp.dhis.epm4d.action.UpdateCertificate" class="org.hisp.dhis.epm4d.action.UpdateCertificate">
+        <property name="userService" ref="org.hisp.dhis.user.UserService"></property>
+        <property name="currentUserService" ref="org.hisp.dhis.user.CurrentUserService"></property>
+        <property name="attributeService" ref="org.hisp.dhis.attribute.AttributeService"></property>
+        <property name="certificateService" ref="org.hisp.dhis.certificate.CertificateService"></property>
+    </bean>
+
+    <bean id="org.hisp.dhis.epm4d.action.ShowUpdateCandidateForm" class="org.hisp.dhis.epm4d.action.ShowUpdateCandidateForm">
+        <property name="userService" ref="org.hisp.dhis.user.UserService"></property>
+        <property name="currentUserService" ref="org.hisp.dhis.user.CurrentUserService"></property>
+        <property name="attributeService" ref="org.hisp.dhis.attribute.AttributeService"></property>
+        <property name="candidateService" ref="org.hisp.dhis.candidate.CandidateService"></property>
+        <property name="collegeService" ref="org.hisp.dhis.college.CollegeService"></property>
+    </bean>
+
+    <bean id="org.hisp.dhis.epm4d.action.UpdateCandidate" class="org.hisp.dhis.epm4d.action.UpdateCandidate">
+        <property name="userService" ref="org.hisp.dhis.user.UserService"></property>
+        <property name="currentUserService" ref="org.hisp.dhis.user.CurrentUserService"></property>
+        <property name="attributeService" ref="org.hisp.dhis.attribute.AttributeService"></property>
+        <property name="candidateService" ref="org.hisp.dhis.candidate.CandidateService"></property>
+    </bean>
+
+    <bean id="org.hisp.dhis.epm4d.action.ShowUpdateCollegeForm" class="org.hisp.dhis.epm4d.action.ShowUpdateCollegeForm">
+        <property name="userService" ref="org.hisp.dhis.user.UserService"></property>
+        <property name="currentUserService" ref="org.hisp.dhis.user.CurrentUserService"></property>
+        <property name="attributeService" ref="org.hisp.dhis.attribute.AttributeService"></property>
+        <property name="collegeService" ref="org.hisp.dhis.college.CollegeService"></property>
+    </bean>
+
+    <bean id="org.hisp.dhis.epm4d.action.UpdateCollege" class="org.hisp.dhis.epm4d.action.UpdateCollege">
+        <property name="userService" ref="org.hisp.dhis.user.UserService"></property>
+        <property name="currentUserService" ref="org.hisp.dhis.user.CurrentUserService"></property>
+        <property name="attributeService" ref="org.hisp.dhis.attribute.AttributeService"></property>
+        <property name="collegeService" ref="org.hisp.dhis.college.CollegeService"></property>
+    </bean>
+
+</beans>

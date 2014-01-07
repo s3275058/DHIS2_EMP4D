@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EPM4D</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/theme.css" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="page-header">
+    <h2>$user.username</h2>
+</div>
+<div class="row">
+    <div class="col-sm-3">
+        <div class="list-group">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Candidate</h3>
+                </div>
+            </div>
+            <a href="index.action" class="list-group-item">Home Page</a>
+            <a href="list.action" class="list-group-item">Certificates</a>
+            <a href="listCandidate.action" class="list-group-item">Candidates</a>
+            <a href="listCollege.action" class="list-group-item">College</a>
+            <a href="../dhis-web-commons-about/showUpdateUserProfileForm.action" class="list-group-item">Profile</a>
+            <a href="about.action" class="list-group-item">About</a>
+            <a href="../dhis-web-commons-security/logout.action" class="list-group-item">Log Out</a>
+        </div>
+    </div>
+
+    <div class="col-sm-9">
+        <div class="panel panel-default">
+
+            <div class="panel-heading">Candidate Information</div>
+
+        </div>
+        <table class="table">
+            <tbody>
+            <tr>
+                <td width='250'>Cid</td>
+                <td>$candidate.sid</td>
+            </tr>
+            <tr>
+                <td width='250'>Full Name</td>
+                <td>$candidate.surname $candidate.lastname</td>
+            </tr>
+            <tr>
+                <td width='250'>Date Of Birth</td>
+                <td>$candidate.dob</td>
+            </tr>
+            <tr>
+                <td width='250'>Address</td>
+                <td>$candidate.address</td>
+            </tr>
+            <tr>
+                <td width='250'>Phone</td>
+                <td>$candidate.phone</td>
+            </tr>
+            <tr>
+                <td width='250'>College</td>
+                <td>$candidate.college</td>
+            </tr>
+            <tr>
+                <td width='250'>Nationality</td>
+                <td>$candidate.nationality</td>
+            </tr>
+            <tr>
+                <td width='250'>Email</td>
+                <td>$candidate.email</td>
+            </tr>
+            <tr>
+                <td width='250'>Gender</td>
+                <td>$candidate.gender</td>
+            </tr>
+            <tr>
+                <td width='250'>Dynamic Attributes</td>
+                <td>#tblDynamicAttributes( { "attributes": $attributes, "attributeValues": $attributeValues } )</td>
+            </tr>
+            <tr>
+                <td><a href="listCandidate.action" class="btn btn-default btn-sm" role="button">OK</a></td>
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>
+
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

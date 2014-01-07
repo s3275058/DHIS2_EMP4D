@@ -1,0 +1,131 @@
+2014-01-03 10:30:36,796 - ResourceManager : found /dhis-web-epm4d/list.html with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2014-01-03 10:30:44,125 - ResourceManager : found /main.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2014-01-03 10:30:44,140 - Velocimacro : VM addition rejected : objectList : inline not allowed to replace existing VM
+2014-01-03 10:30:44,140 - Velocimacro : VM addition rejected : alternate : inline not allowed to replace existing VM
+2014-01-03 10:30:44,140 - Velocimacro : VM addition rejected : formatBool : inline not allowed to replace existing VM
+2014-01-03 10:30:44,140 - Velocimacro : VM addition rejected : formatAggregationOperator : inline not allowed to replace existing VM
+2014-01-03 10:30:44,140 - Velocimacro : VM addition rejected : formatType : inline not allowed to replace existing VM
+2014-01-03 10:30:44,140 - Velocimacro : VM addition rejected : openHelp : inline not allowed to replace existing VM
+2014-01-03 10:30:44,140 - Velocimacro : VM addition rejected : introListImgItem : inline not allowed to replace existing VM
+2014-01-03 10:30:44,140 - Velocimacro : VM addition rejected : introListImgApp : inline not allowed to replace existing VM
+2014-01-03 10:30:44,140 - Velocimacro : VM addition rejected : organisationUnitSelectionTree : inline not allowed to replace existing VM
+2014-01-03 10:30:44,140 - Velocimacro : VM addition rejected : filterDiv : inline not allowed to replace existing VM
+2014-01-03 10:30:44,140 - Velocimacro : VM addition rejected : trHeader : inline not allowed to replace existing VM
+2014-01-03 10:30:44,140 - Velocimacro : VM addition rejected : trTextInput : inline not allowed to replace existing VM
+2014-01-03 10:30:44,140 - Velocimacro : VM addition rejected : trBooleanSelectInput : inline not allowed to replace existing VM
+2014-01-03 10:30:44,140 - Velocimacro : VM addition rejected : trDateInput : inline not allowed to replace existing VM
+2014-01-03 10:30:44,156 - Velocimacro : VM addition rejected : trNumberInput : inline not allowed to replace existing VM
+2014-01-03 10:30:44,156 - Velocimacro : VM addition rejected : trIntegerInput : inline not allowed to replace existing VM
+2014-01-03 10:30:44,156 - Velocimacro : VM addition rejected : trPositiveIntegerInput : inline not allowed to replace existing VM
+2014-01-03 10:30:44,156 - Velocimacro : VM addition rejected : trNegativeIntegerInput : inline not allowed to replace existing VM
+2014-01-03 10:30:44,156 - Velocimacro : VM addition rejected : trMultipleChoiceInput : inline not allowed to replace existing VM
+2014-01-03 10:30:44,156 - Velocimacro : VM addition rejected : tblDynamicAttributesJavascript : inline not allowed to replace existing VM
+2014-01-03 10:30:44,156 - Velocimacro : VM addition rejected : tblDynamicAttributes : inline not allowed to replace existing VM
+2014-01-03 10:30:44,156 - Velocimacro : VM addition rejected : sharingDialog : inline not allowed to replace existing VM
+2014-01-03 10:30:44,156 - Velocimacro : VM addition rejected : sharingCreateNotification : inline not allowed to replace existing VM
+2014-01-03 10:30:44,156 - ResourceManager : found macros.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2014-01-03 10:30:44,156 - ResourceManager : found /dhis-web-epm4d/list.html with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2014-01-03 10:30:46,625 - ResourceManager : found /main.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2014-01-03 10:30:46,640 - Velocimacro : VM addition rejected : objectList : inline not allowed to replace existing VM
+2014-01-03 10:30:46,640 - Velocimacro : VM addition rejected : alternate : inline not allowed to replace existing VM
+2014-01-03 10:30:46,640 - Velocimacro : VM addition rejected : formatBool : inline not allowed to replace existing VM
+2014-01-03 10:30:46,640 - Velocimacro : VM addition rejected : formatAggregationOperator : inline not allowed to replace existing VM
+2014-01-03 10:30:46,640 - Velocimacro : VM addition rejected : formatType : inline not allowed to replace existing VM
+2014-01-03 10:30:46,640 - Velocimacro : VM addition rejected : openHelp : inline not allowed to replace existing VM
+2014-01-03 10:30:46,640 - Velocimacro : VM addition rejected : introListImgItem : inline not allowed to replace existing VM
+2014-01-03 10:30:46,640 - Velocimacro : VM addition rejected : introListImgApp : inline not allowed to replace existing VM
+2014-01-03 10:30:46,640 - Velocimacro : VM addition rejected : organisationUnitSelectionTree : inline not allowed to replace existing VM
+2014-01-03 10:30:46,640 - Velocimacro : VM addition rejected : filterDiv : inline not allowed to replace existing VM
+2014-01-03 10:30:46,640 - Velocimacro : VM addition rejected : trHeader : inline not allowed to replace existing VM
+2014-01-03 10:30:46,640 - Velocimacro : VM addition rejected : trTextInput : inline not allowed to replace existing VM
+2014-01-03 10:30:46,640 - Velocimacro : VM addition rejected : trBooleanSelectInput : inline not allowed to replace existing VM
+2014-01-03 10:30:46,640 - Velocimacro : VM addition rejected : trDateInput : inline not allowed to replace existing VM
+2014-01-03 10:30:46,640 - Velocimacro : VM addition rejected : trNumberInput : inline not allowed to replace existing VM
+2014-01-03 10:30:46,640 - Velocimacro : VM addition rejected : trIntegerInput : inline not allowed to replace existing VM
+2014-01-03 10:30:46,656 - Velocimacro : VM addition rejected : trPositiveIntegerInput : inline not allowed to replace existing VM
+2014-01-03 10:30:46,656 - Velocimacro : VM addition rejected : trNegativeIntegerInput : inline not allowed to replace existing VM
+2014-01-03 10:30:46,656 - Velocimacro : VM addition rejected : trMultipleChoiceInput : inline not allowed to replace existing VM
+2014-01-03 10:30:46,656 - Velocimacro : VM addition rejected : tblDynamicAttributesJavascript : inline not allowed to replace existing VM
+2014-01-03 10:30:46,656 - Velocimacro : VM addition rejected : tblDynamicAttributes : inline not allowed to replace existing VM
+2014-01-03 10:30:46,656 - Velocimacro : VM addition rejected : sharingDialog : inline not allowed to replace existing VM
+2014-01-03 10:30:46,656 - Velocimacro : VM addition rejected : sharingCreateNotification : inline not allowed to replace existing VM
+2014-01-03 10:30:46,656 - ResourceManager : found macros.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2014-01-03 10:30:46,656 - ResourceManager : found /dhis-web-epm4d/addCertificateForm.html with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2014-01-03 10:31:13,296 - ResourceManager : found /main.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2014-01-03 10:31:13,296 - Velocimacro : VM addition rejected : objectList : inline not allowed to replace existing VM
+2014-01-03 10:31:13,296 - Velocimacro : VM addition rejected : alternate : inline not allowed to replace existing VM
+2014-01-03 10:31:13,296 - Velocimacro : VM addition rejected : formatBool : inline not allowed to replace existing VM
+2014-01-03 10:31:13,296 - Velocimacro : VM addition rejected : formatAggregationOperator : inline not allowed to replace existing VM
+2014-01-03 10:31:13,296 - Velocimacro : VM addition rejected : formatType : inline not allowed to replace existing VM
+2014-01-03 10:31:13,296 - Velocimacro : VM addition rejected : openHelp : inline not allowed to replace existing VM
+2014-01-03 10:31:13,296 - Velocimacro : VM addition rejected : introListImgItem : inline not allowed to replace existing VM
+2014-01-03 10:31:13,296 - Velocimacro : VM addition rejected : introListImgApp : inline not allowed to replace existing VM
+2014-01-03 10:31:13,296 - Velocimacro : VM addition rejected : organisationUnitSelectionTree : inline not allowed to replace existing VM
+2014-01-03 10:31:13,296 - Velocimacro : VM addition rejected : filterDiv : inline not allowed to replace existing VM
+2014-01-03 10:31:13,296 - Velocimacro : VM addition rejected : trHeader : inline not allowed to replace existing VM
+2014-01-03 10:31:13,296 - Velocimacro : VM addition rejected : trTextInput : inline not allowed to replace existing VM
+2014-01-03 10:31:13,296 - Velocimacro : VM addition rejected : trBooleanSelectInput : inline not allowed to replace existing VM
+2014-01-03 10:31:13,296 - Velocimacro : VM addition rejected : trDateInput : inline not allowed to replace existing VM
+2014-01-03 10:31:13,296 - Velocimacro : VM addition rejected : trNumberInput : inline not allowed to replace existing VM
+2014-01-03 10:31:13,296 - Velocimacro : VM addition rejected : trIntegerInput : inline not allowed to replace existing VM
+2014-01-03 10:31:13,296 - Velocimacro : VM addition rejected : trPositiveIntegerInput : inline not allowed to replace existing VM
+2014-01-03 10:31:13,296 - Velocimacro : VM addition rejected : trNegativeIntegerInput : inline not allowed to replace existing VM
+2014-01-03 10:31:13,296 - Velocimacro : VM addition rejected : trMultipleChoiceInput : inline not allowed to replace existing VM
+2014-01-03 10:31:13,296 - Velocimacro : VM addition rejected : tblDynamicAttributesJavascript : inline not allowed to replace existing VM
+2014-01-03 10:31:13,296 - Velocimacro : VM addition rejected : tblDynamicAttributes : inline not allowed to replace existing VM
+2014-01-03 10:31:13,296 - Velocimacro : VM addition rejected : sharingDialog : inline not allowed to replace existing VM
+2014-01-03 10:31:13,312 - Velocimacro : VM addition rejected : sharingCreateNotification : inline not allowed to replace existing VM
+2014-01-03 10:31:13,312 - ResourceManager : found macros.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2014-01-03 10:31:13,312 - ResourceManager : found /dhis-web-epm4d/list.html with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2014-01-03 10:31:29,062 - ResourceManager : found /main.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2014-01-03 10:31:29,078 - Velocimacro : VM addition rejected : objectList : inline not allowed to replace existing VM
+2014-01-03 10:31:29,078 - Velocimacro : VM addition rejected : alternate : inline not allowed to replace existing VM
+2014-01-03 10:31:29,078 - Velocimacro : VM addition rejected : formatBool : inline not allowed to replace existing VM
+2014-01-03 10:31:29,078 - Velocimacro : VM addition rejected : formatAggregationOperator : inline not allowed to replace existing VM
+2014-01-03 10:31:29,078 - Velocimacro : VM addition rejected : formatType : inline not allowed to replace existing VM
+2014-01-03 10:31:29,078 - Velocimacro : VM addition rejected : openHelp : inline not allowed to replace existing VM
+2014-01-03 10:31:29,078 - Velocimacro : VM addition rejected : introListImgItem : inline not allowed to replace existing VM
+2014-01-03 10:31:29,078 - Velocimacro : VM addition rejected : introListImgApp : inline not allowed to replace existing VM
+2014-01-03 10:31:29,078 - Velocimacro : VM addition rejected : organisationUnitSelectionTree : inline not allowed to replace existing VM
+2014-01-03 10:31:29,078 - Velocimacro : VM addition rejected : filterDiv : inline not allowed to replace existing VM
+2014-01-03 10:31:29,078 - Velocimacro : VM addition rejected : trHeader : inline not allowed to replace existing VM
+2014-01-03 10:31:29,078 - Velocimacro : VM addition rejected : trTextInput : inline not allowed to replace existing VM
+2014-01-03 10:31:29,078 - Velocimacro : VM addition rejected : trBooleanSelectInput : inline not allowed to replace existing VM
+2014-01-03 10:31:29,078 - Velocimacro : VM addition rejected : trDateInput : inline not allowed to replace existing VM
+2014-01-03 10:31:29,078 - Velocimacro : VM addition rejected : trNumberInput : inline not allowed to replace existing VM
+2014-01-03 10:31:29,078 - Velocimacro : VM addition rejected : trIntegerInput : inline not allowed to replace existing VM
+2014-01-03 10:31:29,078 - Velocimacro : VM addition rejected : trPositiveIntegerInput : inline not allowed to replace existing VM
+2014-01-03 10:31:29,078 - Velocimacro : VM addition rejected : trNegativeIntegerInput : inline not allowed to replace existing VM
+2014-01-03 10:31:29,078 - Velocimacro : VM addition rejected : trMultipleChoiceInput : inline not allowed to replace existing VM
+2014-01-03 10:31:29,078 - Velocimacro : VM addition rejected : tblDynamicAttributesJavascript : inline not allowed to replace existing VM
+2014-01-03 10:31:29,078 - Velocimacro : VM addition rejected : tblDynamicAttributes : inline not allowed to replace existing VM
+2014-01-03 10:31:29,078 - Velocimacro : VM addition rejected : sharingDialog : inline not allowed to replace existing VM
+2014-01-03 10:31:29,078 - Velocimacro : VM addition rejected : sharingCreateNotification : inline not allowed to replace existing VM
+2014-01-03 10:31:29,078 - ResourceManager : found macros.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2014-01-03 10:31:29,093 - ResourceManager : found /dhis-web-epm4d/certificate.html with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2014-01-03 10:31:46,546 - ResourceManager : found /main.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2014-01-03 10:31:46,562 - Velocimacro : VM addition rejected : objectList : inline not allowed to replace existing VM
+2014-01-03 10:31:46,562 - Velocimacro : VM addition rejected : alternate : inline not allowed to replace existing VM
+2014-01-03 10:31:46,562 - Velocimacro : VM addition rejected : formatBool : inline not allowed to replace existing VM
+2014-01-03 10:31:46,562 - Velocimacro : VM addition rejected : formatAggregationOperator : inline not allowed to replace existing VM
+2014-01-03 10:31:46,562 - Velocimacro : VM addition rejected : formatType : inline not allowed to replace existing VM
+2014-01-03 10:31:46,562 - Velocimacro : VM addition rejected : openHelp : inline not allowed to replace existing VM
+2014-01-03 10:31:46,562 - Velocimacro : VM addition rejected : introListImgItem : inline not allowed to replace existing VM
+2014-01-03 10:31:46,562 - Velocimacro : VM addition rejected : introListImgApp : inline not allowed to replace existing VM
+2014-01-03 10:31:46,562 - Velocimacro : VM addition rejected : organisationUnitSelectionTree : inline not allowed to replace existing VM
+2014-01-03 10:31:46,562 - Velocimacro : VM addition rejected : filterDiv : inline not allowed to replace existing VM
+2014-01-03 10:31:46,562 - Velocimacro : VM addition rejected : trHeader : inline not allowed to replace existing VM
+2014-01-03 10:31:46,562 - Velocimacro : VM addition rejected : trTextInput : inline not allowed to replace existing VM
+2014-01-03 10:31:46,562 - Velocimacro : VM addition rejected : trBooleanSelectInput : inline not allowed to replace existing VM
+2014-01-03 10:31:46,562 - Velocimacro : VM addition rejected : trDateInput : inline not allowed to replace existing VM
+2014-01-03 10:31:46,562 - Velocimacro : VM addition rejected : trNumberInput : inline not allowed to replace existing VM
+2014-01-03 10:31:46,562 - Velocimacro : VM addition rejected : trIntegerInput : inline not allowed to replace existing VM
+2014-01-03 10:31:46,562 - Velocimacro : VM addition rejected : trPositiveIntegerInput : inline not allowed to replace existing VM
+2014-01-03 10:31:46,562 - Velocimacro : VM addition rejected : trNegativeIntegerInput : inline not allowed to replace existing VM
+2014-01-03 10:31:46,562 - Velocimacro : VM addition rejected : trMultipleChoiceInput : inline not allowed to replace existing VM
+2014-01-03 10:31:46,562 - Velocimacro : VM addition rejected : tblDynamicAttributesJavascript : inline not allowed to replace existing VM
+2014-01-03 10:31:46,562 - Velocimacro : VM addition rejected : tblDynamicAttributes : inline not allowed to replace existing VM
+2014-01-03 10:31:46,562 - Velocimacro : VM addition rejected : sharingDialog : inline not allowed to replace existing VM
+2014-01-03 10:31:46,562 - Velocimacro : VM addition rejected : sharingCreateNotification : inline not allowed to replace existing VM
+2014-01-03 10:31:46,562 - ResourceManager : found macros.vm with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+2014-01-03 10:31:46,562 - ResourceManager : found /dhis-web-epm4d/list.html with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader

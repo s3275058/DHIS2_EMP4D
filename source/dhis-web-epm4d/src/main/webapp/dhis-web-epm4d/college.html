@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EPM4D</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/theme.css" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="page-header">
+    <h2>$user.username</h2>
+</div>
+<div class="row">
+    <div class="col-sm-3">
+        <div class="list-group">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">College</h3>
+                </div>
+            </div>
+            <a href="index.action" class="list-group-item">Home Page</a>
+            <a href="list.action" class="list-group-item">Certificates</a>
+            <a href="listCandidate.action" class="list-group-item">Candidates</a>
+            <a href="listCollege.action" class="list-group-item">College</a>
+            <a href="../dhis-web-commons-about/showUpdateUserProfileForm.action" class="list-group-item">Profile</a>
+            <a href="about.action" class="list-group-item">About</a>
+            <a href="../dhis-web-commons-security/logout.action" class="list-group-item">Log Out</a>
+        </div>
+    </div>
+
+    <div class="col-sm-9">
+        <div class="panel panel-default">
+
+            <div class="panel-heading">College Information</div>
+
+        </div>
+        <table class="table">
+            <tbody>
+            <tr>
+                <td width='250'>College ID</td>
+                <td>$college.coid</td>
+            </tr>
+            <tr>
+                <td width='250'>Name</td>
+                <td>$college.name</td>
+            </tr>
+            <tr>
+                <td width='250'>Address</td>
+                <td>$college.address</td>
+            </tr>
+            <tr>
+                <td width='250'>Organisation Unit</td>
+                <td>$college.orgunit</td>
+            </tr>
+            <tr>
+                <td width='250'>Phone</td>
+                <td>$college.phone</td>
+            </tr>
+            <tr>
+                <td width='250'>Training System</td>
+                <td>$college.trainingsystem</td>
+            </tr>
+            <tr>
+                <td width='250'>Establish Date</td>
+                <td>$college.establishdate</td>
+            </tr>
+            <tr>
+                <td width='250'>Dynamic Attributes</td>
+                <td>#tblDynamicAttributes( { "attributes": $attributes, "attributeValues": $attributeValues } )</td>
+            </tr>
+            <tr>
+                <td width='250'><a href="listCollege.action" class="btn btn-default btn-sm" role="button">OK</a></td>
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>
+
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

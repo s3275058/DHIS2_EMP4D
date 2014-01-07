@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EPM4D</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="css/theme.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <div class="page-header">
+        <h2>Username will be placed here (update later)</h2>
+    </div>
+	<div class="row">
+		<div class="col-sm-3">
+			<div class="list-group">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title">Certificate</h3>
+					</div>
+				</div>
+				<a href="index.action" class="list-group-item">Home Page</a>
+				<a href="list.action" class="list-group-item">Certificates</a>
+				<a href="#" class="list-group-item">Candidates</a>
+				<a href="#" class="list-group-item">Statistics</a>
+				<a href="../dhis-web-commons-about/showUpdateUserProfileForm.action" class="list-group-item">Profile</a>
+				<a href="#" class="list-group-item">Overview</a>
+				<a href="../dhis-web-commons-security/logout.action" class="list-group-item">Log Out</a>
+			</div>		
+		</div>
+
+		<div class="col-sm-7">
+			<div class="panel panel-default">
+
+				<div class="panel-heading">Username Profile</div>
+				<div class="panel-body">
+					<form id="updateUserProfileForm" name="updateUserProfileForm"> 
+					<div><input type="hidden" id="id" name="id" value="$userCredentials.id"/></div>		
+					<table class="table">
+						<tr>
+							<td width="200px">Email</td>
+							<td><input type="text" class="form-control" id="email" name="email" value="$!encoder.htmlEncode( $userCredentials.user.email )"></td>
+						</tr>
+						<tr>
+							<td>Phone Number</td>
+							<td><input type="text" id="phoneNumber" name="phoneNumber" value="$!encoder.htmlEncode( $userCredentials.user.phoneNumber )" class="form-control"></td>
+						</tr>
+						<tr>
+							<td>Introduction</label></td>
+							<td><textarea id="introduction" name="introduction" class="form-control">$!encoder.htmlEncode( $!userCredentials.user.introduction )</textarea></td>
+						</tr>
+						<tr>
+							<td>Job Title</label></td>
+							<td><input type="text" id="jobTitle" name="jobTitle" value="$!encoder.htmlEncode( $userCredentials.user.jobTitle )" class="form-control"></td>
+						</tr>
+						<tr>
+							<td>Gender</td>
+							<td><select type="text" id="gender" name="gender" class="form-control">
+								<option value="gender_male" #if( $!userCredentials.user.gender == "gender_male" ) selected="selected"#end>Male</option>
+								<option value="gender_female" #if( $!userCredentials.user.gender == "gender_female" ) selected="selected"#end>Female</option>
+								<option value="gender_other" #if( $!userCredentials.user.gender == "gender_other" ) selected="selected"#end>Other</option>
+							</select></td>
+						</tr>
+						<tr>
+							<td>Birthday</td>
+							<td><input type="text" id="birthday" name="birthday" value="$!format.formatDate( $!userCredentials.user.birthday )" class="form-control"></td>
+						</tr>
+						<tr>
+							<td>Nationality</td>
+							<td><input type="text" id="nationality" name="nationality" value="$!encoder.htmlEncode( $!userCredentials.user.nationality )" class="form-control"></td>
+						</tr>
+						<tr>
+							<td>Employer</td>
+							<td><input type="text" id="employer" name="employer" value="$!encoder.htmlEncode( $!userCredentials.user.employer )" class="form-control"></td>
+						</tr>
+						<tr>
+							<td>Education</td>
+							<td><textarea id="education" name="education" class="form-control">$!encoder.htmlEncode( $!userCredentials.user.education )</textarea></td>
+						</tr>
+						<tr>
+							<td>Interests</td>
+							<td><textarea id="interests" name="interests" class="form-control">$!encoder.htmlEncode( $!userCredentials.user.interests )</textarea></td>
+						</tr>
+						<tr>
+							<td>Languages</td>
+							<td><textarea id="languages" name="languages" class="form-control">$!encoder.htmlEncode( $!userCredentials.user.languages )</textarea></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td valign="top"><input type="submit" value="Save" class="btn btn-default"/></td>
+						</tr>
+					</table>
+					</form> 
+				</div>
+			</div>	
+		</div>
+	</div>		
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

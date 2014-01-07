@@ -1,0 +1,145 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+    <title>Admin Page</title>
+	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>	
+	<script src="http://jquery.bassistance.de/validate/jquery.validate.js"	type="text/javascript"></script>
+	<script src="function.js" type="text/javascript"> </script>	
+<script>
+	$.validator.setDefaults();
+		
+	$().ready(function () {
+		$('#formCer').validate();
+	
+		$('#formAcc').validate({
+			rules:{
+				username: {
+					required: true,
+					minlength: 5,
+					maxlength: 12
+				},
+				password: {
+					required: true,
+					minlength: 5,
+					maxlength: 12
+				},
+				role: {
+					required: true
+				}
+			},
+			
+			messages: {
+				username: {
+					required: "Please enter a username",
+					minlength: "Your username must consist of at least 5 characters",
+					maxlength: "Your username must consist of at most 2 characters"
+				},
+				password: {
+					required: "Please enter a password",
+					minlength: "Your password must be at least 5 characters long",
+					maxlength: "Your password must be at most 12 characters long"
+				},
+				role: {
+					required: "Please fill a role"
+				}
+			}
+		});
+	});
+</script>
+</head>
+<body>
+
+<h2><strong>Manage Certificates</strong></h2>
+
+    <!-- THIS IS FOR CERTIFICATE FORM -->
+    <form id="formCer" method="post" action="saveCertificate.action">
+        <input type="hidden" id="Cid" name="Cid" />
+        <table border="1">
+            <tr><td>Board</td>
+                <td><input type="text" id="board" name="board" required /></td></tr>
+            <tr><td>Subject</td>
+                <td><input type="text"  id="subject" name="subject" required /></td></tr>
+            <tr><td>Training System</td>
+                <td><input type="text" id="trainingsystem" name="trainingsystem" required /></td></tr>
+            <tr><td>Start Date</td>
+                <td><input type="text" id="startdate" name="startdate" required /></td></tr>
+            <tr><td>End Date</td>
+                <td><input type="text" id="enddate" name="enddate" required /></td></tr>
+            <tr><td>Candidate</td>
+                <td><input type="text" id="candidate" name="candidate" required /></td></tr>
+            <tr><td rowspan="2"><input type="submit" onclick="addCertificate();" value="Add New" /></td></tr>
+        </table>
+    </form>
+
+    <!-- LIST CERTIFICATE AND ACCOUNT -->
+
+    <table border=1>
+        <thead>
+        <tr>
+            <td>Board</td>
+            <td>Subject</td>
+            <td>Training System</td>
+            <td>Start Date</td>
+            <td>End Date</td>
+            <td>Candidate</td>
+        </tr>
+        </thead>
+        <tbody>
+        #foreach($certificate in $certificates)
+        <tr>
+            <td>$certificate.board</td>
+            <td>$certificate.subject</td>
+            <td>$certificate.trainingSystem</td>
+            <td>$certificate.startDate</td>
+            <td>$certificate.endDate</td>
+            <td>$certificate.candidate</td>
+            <td><a onclick='editCertificate($certificate.Cid)'>Edit</a> ||
+                <a onclick='deleteCertificate($certificate.Cid)'>Delete</a></td>
+        </tr>
+        </tbody>
+        #end
+    </table>
+
+<h2><strong>Manage Account</strong></h2>
+
+    <!-- THIS IS FOR ACCOUNT FORM -->
+    <form id="formAcc" class="cmxform" method="post" action="saveAccount.action">
+        <input type="hidden" id="Aid" name="Aid">
+        <table border="1">
+            <thead>
+            <tr><td>Username</td>
+                <td><input type="text" id="username" name="username" required/></td></tr>
+            <tr><td>Password</td>
+                <td><input type="text" id="password" name="password" required/></td></tr>
+            <tr><td>Role</td>
+                <td><input type="text" id="role" name="role" required/></td></tr>
+            <tr><td rowspan="2"><input type="submit" onclick="addAccount();" value="Submit" /></td></tr>
+            </thead>
+        </table>
+    </form>
+
+    <!-- LIST OF ACCOUNT -->
+    <table border=1>
+        <thead>
+        <tr>
+            <td>Username</td>
+            <td>Password</td>
+            <td>Role</td>
+        </tr>
+        </thead>
+        <tbody>
+        #foreach($account in $accounts)
+        <tr>
+            <td>$account.username</td>
+            <td>$account.password</td>
+            <td>$account.role</td>
+            <td><a onclick='editAccount($account.id)'>Edit</a> ||
+                <a onclick='deleteAccount($account.id)'>Delete</a></td>
+        </tr>
+        </tbody>
+        #end
+    </table>
+	
+</body>
+</html>
+

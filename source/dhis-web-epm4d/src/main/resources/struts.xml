@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+    <include file="dhis-web-commons.xml"/>
+
+    <package name="dhis-web-epm4d" extends="dhis-web-commons"
+             namespace="/dhis-web-epm4d">
+
+        <!-- INDEX -->
+        <action name="index" class="org.hisp.dhis.epm4d.action.NoAction">
+
+            <result name="success" type="velocity">/main.vm</result>
+            <param name="page">/dhis-web-epm4d/index.html</param>
+            <param name="hideMenu">true</param>
+        </action>
+
+        <!-- ABOUT -->
+        <action name="about" class="org.hisp.dhis.epm4d.action.About">
+
+            <result name="success" type="velocity">/main.vm</result>
+            <param name="page">/dhis-web-epm4d/about.html</param>
+            <param name="hideMenu">true</param>
+        </action>
+
+        <!-- LIST -->
+        <action name="list" class="org.hisp.dhis.epm4d.action.Test">
+
+            <result name="success" type="velocity">/main.vm</result>
+            <param name="page">/dhis-web-epm4d/list.html</param>
+            <param name="hideMenu">true</param>
+
+        </action>
+
+        <action name="listCandidate" class="org.hisp.dhis.epm4d.action.ListCandidate">
+
+            <result name="success" type="velocity">/main.vm</result>
+            <param name="page">/dhis-web-epm4d/listCandidates.html</param>
+            <param name="hideMenu">true</param>
+
+        </action>
+
+        <action name="listCollege" class="org.hisp.dhis.epm4d.action.ListCollege">
+
+            <result name="success" type="velocity">/main.vm</result>
+            <param name="page">/dhis-web-epm4d/listColleges.html</param>
+            <param name="hideMenu">true</param>
+
+        </action>
+
+        <!-- ADD -->
+        <action name="showAddCertificateForm" class="org.hisp.dhis.epm4d.action.ShowAddCertificateForm">
+            <result name="success" type="velocity">/main.vm</result>
+            <param name="page">/dhis-web-epm4d/addCertificateForm.html</param>
+            <param name="hideMenu">true</param>
+        </action>
+
+        <action name="addCertificate" class="org.hisp.dhis.epm4d.action.AddCertificate">
+            <result name="success" type="redirect">list.action</result>
+            <result name="error" type="redirect">showAddCertificateForm.action</result>
+            <param name="hideMenu">true</param>
+        </action>
+
+        <action name="showAddCandidateForm" class="org.hisp.dhis.epm4d.action.ShowAddCandidateForm">
+            <result name="success" type="velocity">/main.vm</result>
+            <param name="page">/dhis-web-epm4d/addCandidateForm.html</param>
+            <param name="hideMenu">true</param>
+        </action>
+
+        <action name="addCandidate" class="org.hisp.dhis.epm4d.action.AddCandidate">
+            <result name="success" type="redirect">listCandidate.action</result>
+            <result name="error" type="redirect">showAddCandidateForm.action</result>
+            <param name="hideMenu">true</param>
+        </action>
+
+        <action name="showAddCollegeForm" class="org.hisp.dhis.epm4d.action.ShowAddCollegeForm">
+            <result name="success" type="velocity">/main.vm</result>
+            <param name="page">/dhis-web-epm4d/addCollegeForm.html</param>
+            <param name="hideMenu">true</param>
+        </action>
+
+        <action name="addCollege" class="org.hisp.dhis.epm4d.action.AddCollege">
+            <result name="success" type="redirect">listCollege.action</result>
+            <result name="error" type="redirect">showAddCollegeForm.action</result>
+            <param name="hideMenu">true</param>
+        </action>
+
+        <!-- VIEW -->
+
+        <action name="showCertificate" class="org.hisp.dhis.epm4d.action.CertificateInformation">
+            <result name="success" type="velocity">/main.vm</result>
+            <param name="page">/dhis-web-epm4d/certificate.html</param>
+            <param name="hideMenu">true</param>
+        </action>
+
+        <action name="showCandidate" class="org.hisp.dhis.epm4d.action.CandidateInformation">
+            <result name="success" type="velocity">/main.vm</result>
+            <param name="page">/dhis-web-epm4d/candidate.html</param>
+            <param name="hideMenu">true</param>
+        </action>
+
+        <action name="showCollege" class="org.hisp.dhis.epm4d.action.CollegeInformation">
+            <result name="success" type="velocity">/main.vm</result>
+            <param name="page">/dhis-web-epm4d/college.html</param>
+            <param name="hideMenu">true</param>
+        </action>
+
+        <!-- DELETE -->
+        <action name="deleteCertificate" class="org.hisp.dhis.epm4d.action.DeleteCertificate">
+            <result name="success" type="redirect">list.action</result>
+        </action>
+        <action name="deleteCandidate" class="org.hisp.dhis.epm4d.action.DeleteCandidate">
+            <result name="success" type="redirect">listCandidate.action</result>
+        </action>
+        <action name="deleteCollege" class="org.hisp.dhis.epm4d.action.DeleteCollege">
+            <result name="success" type="redirect">listCollege.action</result>
+        </action>
+
+
+        <!-- UPDATE -->
+        <action name="showUpdateCertificateForm" class="org.hisp.dhis.epm4d.action.ShowUpdateCertificateForm">
+            <result name="success" type="velocity">/main.vm</result>
+            <param name="page">/dhis-web-epm4d/updateCertificateForm.html</param>
+            <param name="hideMenu">true</param>
+        </action>
+
+        <action name="updateCertificate" class="org.hisp.dhis.epm4d.action.UpdateCertificate">
+            <result name="success" type="redirect">list.action</result>
+        </action>
+
+        <action name="showUpdateCandidateForm" class="org.hisp.dhis.epm4d.action.ShowUpdateCandidateForm">
+            <result name="success" type="velocity">/main.vm</result>
+            <param name="page">/dhis-web-epm4d/updateCandidateForm.html</param>
+            <param name="hideMenu">true</param>
+        </action>
+
+        <action name="updateCandidate" class="org.hisp.dhis.epm4d.action.UpdateCandidate">
+            <result name="success" type="redirect">listCandidate.action</result>
+        </action>
+
+        <action name="showUpdateCollegeForm" class="org.hisp.dhis.epm4d.action.ShowUpdateCollegeForm">
+            <result name="success" type="velocity">/main.vm</result>
+            <param name="page">/dhis-web-epm4d/updateCollegeForm.html</param>
+            <param name="hideMenu">true</param>
+        </action>
+
+        <action name="updateCollege" class="org.hisp.dhis.epm4d.action.UpdateCollege">
+            <result name="success" type="redirect">listCollege.action</result>
+        </action>
+
+    </package>
+
+</struts>
